@@ -1,0 +1,279 @@
+body {
+	font-family: sans-serif;
+}
+
+@media screen and ((max-width: 770px) or (max-height: 560px)) {
+	body {
+		font-size: 11px;
+	}
+}
+
+@media screen and ((max-width: 570px) or (max-height: 365px)) {
+	body {
+		font-size: 10px;
+	}
+}
+
+.wrapper {
+	display: grid;
+	grid-template-colums: 1fr 1fr;
+	grid-gap: 0px;
+	grid-template-rows: 2rem minmax(4.5rem, 5rem) minmax(30vh, 1fr) 2rem
+		48vh;
+}
+
+@media ( orientation : landscape) {
+	.wrapper {
+		display: grid;
+		grid-template-colums: 1fr 1fr;
+		grid-gap: 0px;
+		grid-template-rows: 2rem 4.5rem minmax(25vh, 1fr) 2rem 48vh;
+	}
+}
+
+.close {
+	grid-column: 1;
+	grid-row: 1;
+	margin: 6px;
+}
+
+.type {
+	grid-column: 2;
+	grid-row: 1;
+	margin: 6px;
+	text-align: right;
+}
+
+.description {
+	grid-column: 1;
+	grid-row: 2;
+	margin: 6px;
+}
+
+.descriptiondetail {
+	grid-column: 1;
+	grid-row: 3;
+	display: block;
+	margin: 6px;
+}
+
+@media screen and (min-width: 50em) {
+	.descriptiondetail {
+		grid-column: 1;
+		grid-row: 3;
+		column-count: auto;
+		column-width: 22em;
+		column-gap: 1.5em;
+		display: block;
+		column-fill: auto;
+		-moz-column-fill: auto;
+		margin: 6px;
+	}
+}
+
+.cover {
+	grid-column: 2;
+	grid-row: 2/3;
+	margin: 6px;
+	max-height: 45vh;
+	text-align: right;
+}
+
+.summary {
+	grid-column: 1/3;
+	grid-row: 4;
+	margin: 6px;
+}
+
+.summarycontent {
+	grid-column: 1/3;
+	grid-row: 5;
+	margin: 6px;
+	column-count: auto;
+	column-gap: 1.5em;
+	column-width: 22em;
+	column-fill: auto;
+	text-align: justify;
+	display: block;
+	min-height: 45vh;
+	orphans: 2;
+	widows: 2;
+}
+
+.coverimage {
+	max-width: 45vw;
+	max-height: 35vh;
+	float: right;
+	margin-left: 4px;
+}
+
+.caption {
+	 font-weight: bold;
+}
+
+.subcaption {
+	 font-size: smaller;
+	 font-weight: bold;
+	 font-style: italic;
+}
+
+.subtitle{
+	font-style: italic;
+}
+
+.smalltext{
+  font-size: 60%;	
+}
+
+.readinfo{
+	font-size: xx-small;
+}
+
+@media ( orientation : landscape) {
+	.coverimage {
+		max-width: 100%;
+		max-height: 30vh;
+		float: right;
+		margin-left: 4px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.smallTableHeader {
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		transform: rotate(180deg);
+	}
+}
+
+table {
+	border: 1px solid black;
+	border-spacing: 0px;
+	border-collapse: collapse
+}
+
+table td {
+	border: 1px solid black;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	padding: 3px
+}
+
+table th {
+	border: 1px solid black;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	padding: 3px
+}
+
+table h2 {
+	margin: 0
+}
+
+table caption {
+	padding: 0.5em;
+	text-align: left;
+	font-weight: normal;
+}
+
+table.is_sortable thead th {
+	background-color: lightgray;
+}
+
+small {
+	font-size: x-small;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+
+  #imagecontainer
+{
+  width:  128px; 
+  height: 171px; 
+
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  display: inline-block;
+}
+
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0000A0;
+  color: #FFFFFF
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 20px;
+  display: block;
+}
+
+.sidenav a {
+  padding: 4px 2px 2px 4px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: inline-block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+figure {
+  padding: 1px;
+  float: left;
+  border: 2px solid #cccccc;
+  display: table;
+  width: 1px;
+   text-align: center;
+   height: 256px;
+   margin: 4px;
+ 
+}
+
+figure img {
+   display: table-row;
+    vertical-align: bottom;
+    margin: auto;
+    padding: 0px;
+     text-align: center;
+}
+
+figure figcaption {
+  padding: 2px;
+  color: #000000;
+  display: table-row;
+    vertical-align: top;
+      font-size: 50%;
+   height: 39px;
+}
+
+.main {
+ margin-left: 15.5%;
+  height: 100%;
+  width:89%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  color: #000000
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-top: 4px;
+  display: inline-block;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+}

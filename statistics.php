@@ -293,7 +293,7 @@ table tr td {
                    $inMonth = false;
                    if (
                        (strtotime($startDate2) < strtotime($beginOfMonth) 
-                       && ($endDate === "" || strtotime($endDate2) > strtotime($beginOfMonth))
+                       && ($endDate === "" || strtotime($endDate2) >= strtotime($beginOfMonth))
                        )                       
                        )
                        $inMonth = true;
